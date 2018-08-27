@@ -1,0 +1,50 @@
+@charset "UTF-8";
+// ========================================
+// Media
+// ========================================
+
+// Images
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+// Fluid embed
+.fluid-embed {
+	@include media("<=tablet") {
+		padding-bottom: calc(56.25% - 2.1875rem); // For ratio 16:9. 75% if ratio is 4:3 rem(35);
+	}
+
+	height: 0;
+	overflow: hidden;
+	padding-bottom: 56.25%; // For ratio 16:9. 75% if ratio is 4:3 rem(35);
+	position: relative;
+
+	embed,
+	object,
+	iframe {
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+}
+
+// Center image background
+.image-as-background {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+// Video as background
+.video-as-background {
+	display: block;
+	height: 100%;
+	object-fit: cover;
+	object-position: center top;
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+}

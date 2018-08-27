@@ -1,0 +1,16 @@
+{
+  "extends": "tslint:recommended",
+  "rules": {
+    "arrow-parens": false,
+    "curly": false,
+    "no-var-requires": false,
+    "no-any": false,
+    "object-literal-sort-keys": false,
+    "only-arrow-functions": false,
+    "ordered-imports": false,
+    "prefer-for-of": false,
+    "promise-function-async": false,
+    "semicolon": [true, "never"],
+    "quotemark": [true, "single", "avoid-escape", "avoid-template"]
+  }
+}
