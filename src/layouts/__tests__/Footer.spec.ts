@@ -3,7 +3,6 @@ import Footer from '@layouts/Footer.vue'
 import TestHelpers from '@src/../tests/helpers'
 
 describe('Footer.vue', () => {
-
   it('Footer component mounts without errors', () => {
     const wrapper = shallowMount(Footer)
     expect(wrapper.isVueInstance()).toBeTruthy()

@@ -3,7 +3,6 @@ import Header from '@layouts/Header.vue'
 import TestHelpers from '@src/../tests/helpers'
 
 describe('Header.vue', () => {
-
   it('Main component mounts without errors', () => {
     const wrapper = shallowMount(Header)
     expect(wrapper.isVueInstance()).toBeTruthy()

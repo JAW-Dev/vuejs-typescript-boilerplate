@@ -23,7 +23,7 @@ describe('Home.vue', () => {
     it(selector + ' contains text', () => {
       const wrapper = shallowMount(Home)
       const h = new TestHelpers(wrapper, expect)
-      const text = 'This is an home page'
+      const text = 'This is the home page'
       h.containsText(selector, text)
     })
   })

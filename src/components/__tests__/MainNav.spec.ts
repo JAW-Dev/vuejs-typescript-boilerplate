@@ -7,7 +7,6 @@ const localVue = createLocalVue()
 localVue.use(VueRouter)
 
 describe('MainNav.vue', () => {
-
   it('Main component mounts without errors', () => {
     const wrapper = shallowMount(MainNav, { localVue })
     expect(wrapper.isVueInstance()).toBeTruthy()

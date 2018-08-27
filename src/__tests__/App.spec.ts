@@ -3,7 +3,6 @@ import App from '@src/App.vue'
 import TestHelpers from '@src/../tests/helpers'
 
 describe('App.vue', () => {
-
   it('App component mounts without errors', () => {
     const wrapper = shallowMount(App)
     expect(wrapper.isVueInstance()).toBeTruthy()

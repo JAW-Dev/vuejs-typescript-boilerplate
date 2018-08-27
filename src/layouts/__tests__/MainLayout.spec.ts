@@ -3,7 +3,6 @@ import MainLayout from '@layouts/MainLayout.vue'
 import TestHelpers from '@src/../tests/helpers'
 
 describe('MainLayout.vue', () => {
-
   it('MainLayout component mounts without errors', () => {
     const wrapper = shallowMount(MainLayout)
     expect(wrapper.isVueInstance()).toBeTruthy()

@@ -3,7 +3,6 @@ import Copyright from '@components/Copyright.vue'
 import TestHelpers from '@src/../tests/helpers'
 
 describe('Copyright.vue', () => {
-
   it('Copyright component mounts without errors', () => {
     const wrapper = shallowMount(Copyright)
     expect(wrapper.isVueInstance()).toBeTruthy()
