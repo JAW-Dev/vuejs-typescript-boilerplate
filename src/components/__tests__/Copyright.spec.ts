@@ -25,8 +25,8 @@ describe('Copyright.vue', () => {
     it(selector + ' contains text', () => {
       const wrapper = shallowMount(Copyright, { localVue })
       const h = new TestHelpers(wrapper, expect)
-      const title = process.env.VUE_APP_TITLE
-      const date = new Date().getFullYear()
+      const title: string|undefined = process.env.VUE_APP_TITLE
+      const date: number = new Date().getFullYear()
       h.containsText(selector, title + ' © ' + date)
     })
   })

@@ -11,10 +11,10 @@ export default Vue.extend({
     return {}
   },
   methods: {
-    siteName() {
+    siteName(): string | undefined {
       return process.env.VUE_APP_TITLE
     },
-    currentYear() {
+    currentYear(): number {
       return new Date().getFullYear()
     },
   },
