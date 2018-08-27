@@ -1,13 +1,11 @@
-import { shallowMount, createLocalVue } from '@vue/test-utils'
+import { shallowMount} from '@vue/test-utils'
 import Header from '@layouts/Header.vue'
 import TestHelpers from '@src/../tests/helpers'
-
-const localVue = createLocalVue()
 
 describe('Header.vue', () => {
 
   it('Main component mounts without errors', () => {
-    const wrapper = shallowMount(Header, { localVue })
+    const wrapper = shallowMount(Header)
     expect(wrapper.isVueInstance()).toBeTruthy()
   })
 
@@ -15,7 +13,7 @@ describe('Header.vue', () => {
 
   classesSelectors.forEach(selector => {
     it(selector + ' has class set', () => {
-      const wrapper = shallowMount(Header, { localVue })
+      const wrapper = shallowMount(Header)
       const h = new TestHelpers(wrapper, expect)
       h.domHas(selector)
     })
@@ -23,7 +21,7 @@ describe('Header.vue', () => {
 
   classesSelectors.forEach(selector => {
     it('If ' + selector + ' has the role attribute', () => {
-      const wrapper = shallowMount(Header, { localVue })
+      const wrapper = shallowMount(Header)
       const h = new TestHelpers(wrapper, expect)
       h.hasAttribute(selector, 'role')
     })
@@ -34,7 +32,6 @@ describe('Header.vue', () => {
   slotSelectors.forEach(selector => {
     it('If slot is populated with an element with the selector ' + selector, () => {
       const wrapper = shallowMount(Header, {
-        localVue,
         slots: {
           default: '<div class="default"></div>',
         },

@@ -1,13 +1,11 @@
-import { shallowMount, createLocalVue } from '@vue/test-utils'
+import { shallowMount } from '@vue/test-utils'
 import Main from '@layouts/Main.vue'
 import TestHelpers from '@src/../tests/helpers'
-
-const localVue = createLocalVue()
 
 describe('Main.vue', () => {
 
   it('Main component mounts without errors', () => {
-    const wrapper = shallowMount(Main, { localVue })
+    const wrapper = shallowMount(Main)
     expect(wrapper.isVueInstance()).toBeTruthy()
   })
 
@@ -34,7 +32,6 @@ describe('Main.vue', () => {
   slotSelectors.forEach(selector => {
     it('If slot is populated with an element with the selector ' + selector, () => {
       const wrapper = shallowMount(Main, {
-        localVue,
         slots: {
           default: '<div class="default"></div>',
         },

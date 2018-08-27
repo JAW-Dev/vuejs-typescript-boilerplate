@@ -1,13 +1,11 @@
-import { shallowMount, createLocalVue } from '@vue/test-utils'
+import { shallowMount } from '@vue/test-utils'
 import About from '@views/About.vue'
 import TestHelpers from '@src/../tests/helpers'
-
-const localVue = createLocalVue()
 
 describe('About.vue', () => {
 
   it('About component mounts without errors', () => {
-    const wrapper = shallowMount(About, { localVue })
+    const wrapper = shallowMount(About)
     expect(wrapper.isVueInstance()).toBeTruthy()
   })
 
@@ -15,7 +13,7 @@ describe('About.vue', () => {
 
   classesSelectors.forEach(selector  => {
     it(selector + ' has class set', () => {
-      const wrapper = shallowMount(About, { localVue })
+      const wrapper = shallowMount(About)
       const h = new TestHelpers(wrapper, expect)
       h.domHas(selector)
     })
@@ -23,7 +21,7 @@ describe('About.vue', () => {
 
   classesSelectors.forEach(selector => {
     it(selector + ' contains text', () => {
-      const wrapper = shallowMount(About, { localVue })
+      const wrapper = shallowMount(About)
       const h = new TestHelpers(wrapper, expect)
       const text = 'This is an about page'
       h.containsText(selector, text)
