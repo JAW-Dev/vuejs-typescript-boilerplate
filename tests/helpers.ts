@@ -1,6 +1,6 @@
 class TestHelpers {
-  public wrapper: any
-  public expect: any
+  private wrapper: any
+  private expect: any
 
   constructor(wrapper: any, expect: any) {
     this.wrapper = wrapper
